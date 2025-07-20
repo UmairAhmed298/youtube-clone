@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube-Clone</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <div id="yt-clone">
+    <div class="grid grid-cols-[250px_1fr_1fr]  h-18 bg-white fixed">
+      <div class="flex items-center w-full h-20 gap-5 ml-6" id="header-left-side">
+        <div class="flex gap-6 mb-4">
+          <img src="/Images/hamburger-menu.svg" alt="Hamberger-Menu" class="w-7">
+          <img src="/Images/youtube-logo.svg" alt="logo" class="w-27">
+        </div>
+      </div>
+
+      <div id="header-center" class="flex items-center"> 
+        <input type="text" class="bg-white w-150 ml-40 font-semibold pl-3 py-[8px] rounded-l-[60px] text-lg shadow-inner border-1 border-gray-300" placeholder="Search">
+
+        <div class="bg-gray-100 h-[45px] flex items-center justify-center w-[70px] rounded-r-[50px] border-1 border-gray-300 hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/search.svg" alt="Search-icon" class="w-8">
+        </div>
+        <div class="rounded-[50px] w-[45px] h-[45px] flex justify-center items-center bg-gray-100 ml-4 hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/voice-search-icon.svg" alt="voice-search-icon" class="w-7">
+        </div>
+
+      </div>
+
+      <div id="header-right-side" class="flex items-center gap-8 ml-43">
+        <div class="flex items-center w-30 h-12 bg-gray-100 rounded-[40px] pl-3 gap-1 hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/upload.svg" alt="Create" class="w-10">
+          <p class="font-bold mb-1">Create</p>
+        </div>
+
+        <div class="relative">
+          <img src="/Images/notifications.svg" alt="notifications" class="w-8">
+          <p class="absolute top-[-5px] left-4 bg-red-500 text-white px-1 rounded-[10px] text-sm font-semibold border-3">9+</p>
+        </div>
+
+        <img src="/Images/profile-pic.jpg" alt=" Profile-pic" class="w-9 h-9 rounded-[20px]" >
+      </div>
+    </div>
+
+
+
+
+    <div id="SideBar" class="w-[260px] h-500 bg-white fixed mt-15">
+
+      <div>
+        <div class="flex items-center gap-5 mt-2 ml-3 bg-white rounded-[10px] py-[7px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/home.svg" alt="Home" class="w-9 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px]">Home</p>
+        </div>
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[7px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/Youtube-shorts-icon.jpeg" alt="Home" class="w-9 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px]">Shorts</p>
+        </div>
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[7px] hover:bg-gray-200 cursor-pointer relative">
+          <img src="/Images/subscriptions.svg" alt="Home" class="w-9 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px]">Subscriptions</p>
+          <p class="absolute w-[5px] h-[5px] bg-blue-500 rounded-[5px] right-5" ></p>
+        </div>
+        <hr class="border-[1px] border-gray-200 mt-5 ml-3">
+        
+        <div class="ml-6">
+          <p class="font-semibold text-[20px] mt-4">You ></p>
+        </div>
+         <div class="flex items-center gap-5 mt-2 ml-3 bg-white rounded-[10px] py-[12px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/history.png" alt="Home" class="w-6 ml-3">
+          <p class="font-semibold text-gray-700 text-[17px] ml-1">History</p>
+        </div>
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[12px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/playlist-videos-icon.png" alt="Home" class="w-6 ml-[15px]">
+          <p class="font-semibold text-gray-700 text-[17px]">Playlists</p>
+        </div>
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[12px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/originals.svg" alt="Home" class="w-8 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px]">Your Videos</p>
+        </div>
+        
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[12px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/watch-later-icon.png" alt="Home" class="w-8 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px]">Watch later</p>
+        </div>
+
+         <div class="flex items-center gap-5 ml-3 bg-white rounded-[10px] py-[12px] hover:bg-gray-200 cursor-pointer">
+          <img src="/Images/youtube-like-icon.jpg" alt="Home" class="w-7 ml-2">
+          <p class="font-semibold text-gray-700 text-[17px] ml-1">Liked Videos</p>
+          
+        </div>
+        <hr class="border border-gray-200 mt-5">
+
+        <div>
+          <p class="text-[20px] font-semibold ml-5 mt-4">Subscriptions</p>
+
+          <div class="relative flex items-center gap-6">
+            <img src="/Images/carryminati-profile-pic.jpeg" alt="carryminati-profile-pic" class="w-7 rounded-[15px] ml-5 mt-3 ">
+            <p class="font-semibold mt-2 text-gray-600">CarryMinati</p>
+            <p class="absolute w-[5px] h-[5px] bg-blue-500 rounded-[5px] top-[22px] right-5" ></p>
+          </div>
+          <div class="relative flex items-center gap-6">
+            <img src="/Images/Yuzuke-profile-pic.jpeg" alt="carryminati-profile-pic" class="w-7 rounded-[15px] ml-5 mt-3 ">
+            <p class="font-semibold mt-2 text-gray-600">Yuzuke</p>
+            <p class="absolute w-[5px] h-[5px] bg-blue-500 rounded-[5px] top-[22px] right-5" ></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div>
+      <div class="ml-[260px] pt-18 w-330 h-screen bg-white">
+
+        <div class="ml-8 flex gap-4 mt-3">
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-black text-lg text-white font-semibold">All</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Gaming</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Mobile Legends: Bang Bang</button>
+          
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Music</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Mixes</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">News</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Reverberation</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Indie pop music</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Live</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Clash Royale</button>
+
+          <button class="px-[10px] py-[3px] rounded-[9px] bg-gray-100 text-lg text-black font-semibold">Pakistan</button>
+        </div>
+
+        <div id="Contents">
+            <div class="grid grid-cols-[440px_440px_440px] h-100 w-full gap-y-2">
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/S5Uz_S4Nf4w/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCb9d-HCG6PSuFAk_PBE0J95hRovg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/Yuzuke-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="https://i.ytimg.com/vi/S5Uz_S4Nf4w/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCb9d-HCG6PSuFAk_PBE0J95hRovg" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-2" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/7Xpmw7-BCB0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAzDUzDjCVk9lkS2yQTta6JNiO-Hw" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/Yuzuke-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">YUZUKE VS DOGIE | Top Global Alucard Vs No. 1 Most Famous Streamer!</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Yuzuke ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2M views  · 2 Years ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-3" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/p_E1sIIn34M/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAzAYX_trNzJVDdE6NxdoufRC0LkA" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/round2hell-profile-pic.jpg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">GAME OF CREED | Round2hell | R2h</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Round2hell ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        65M views  · 4 years ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-4" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/3mF2zlIJyzE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA1rQtDDlGir04zp_FCz3jLgLUobw" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="https://i.ytimg.com/vi/3mF2zlIJyzE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA1rQtDDlGir04zp_FCz3jLgLUobw" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">A Super Nice Japanese Song - Anata no Yoru ga Akeru Made</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-5" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/LAv9hz6QOQI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAHeeUr7EXct-OWgz3YOs7EajmUwg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/Dracula-profile-pic.jpg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">HOW I PRANK A TRASHTALKER BY PRETENDING TO BE NOOB ALU</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-6" class="mt-5 ml-9">
+                  <img src="https://i.ytimg.com/vi/dMXGbcp1F4Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCNUrcL2D0seA4qzfSOb1DuSwbpqg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">THE ART OF DARKSYSTEM EXPLAINED..(You need to know this)</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div>
+
+              <div id="content-1" class="mt-5 ml-9">
+                  <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-full h-58 rounded-[20px]">
+
+                  <div class="flex relative">
+                    <img src="/Images/gaming-cedxvi-profile-pic.jpeg" alt="" class="w-11 h-11 rounded-[25px] mt-3">
+                    <div class="w-75 mt-2 ml-4">
+                      <p class="font-bold text-lg">I FINALLY MET BEST JUNGLER IN THE WORLD "KAIRI" 😲😲😲 -...</p>
+                      <p class="font-semibold text-gray-500 mt-2">
+                        Gaming CEDXVI ✅
+                      </p>
+                      <p class="font-semibold text-gray-500">
+                        2.2M views  · 7 months ago
+                      </p>
+                      <img src="/Images/3-dots.png" alt="" class="absolute w-6 top-3 right-0">
+                    </div>
+
+                  </div>
+              </div> 
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
